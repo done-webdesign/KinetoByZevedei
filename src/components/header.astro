@@ -1,0 +1,95 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "../assets/images/kineto-logo.webp";
+import MobileDropdownMenu from "./nobile-header";
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("scroll-despre")?.addEventListener("click", () => {
+      document
+        .getElementById("despre-zevedei")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+</script>
+
+<header class="lg:flex hidden">
+  <a class="img-nah" href="/">
+    <Image class="logo-img" src={logo} alt="Kinetoterapie by zevedei logo" />
+  </a>
+
+  <div class="flex justify-between max-w-[600px] w-full items-center">
+    <a href="/servicii" class="nav-btn">Serviciile noastre</a>
+    <button id="scroll-despre" class="nav-btn">Despre Zevedei</button>
+    <a
+      href="/servicii#contact"
+      class="contact-btn flex justify-center items-center">Contacteaza-ne</a
+    >
+  </div>
+</header>
+<div class="lg:hidden">
+  <MobileDropdownMenu client:load />
+</div>
+<style>
+  .logo-img {
+    width: 626px;
+    height: 88px;
+  }
+  .img-nah {
+    transform: none !important;
+  }
+  @media only screen and (max-width: 1124px) {
+    .logo-img {
+      width: 400px;
+      height: auto;
+    }
+  }
+  .contact-btn {
+    padding: 18px 30px 18px 30px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: var(--assets);
+  }
+  .contact-btn:hover {
+    transform: scale(1.05);
+  }
+  .nav-btn {
+    background-color: transparent;
+    border: 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  @media only screen and (max-width: 1024px) {
+    .nav-btn {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 90%; /* 150% */
+    }
+  }
+  header {
+    z-index: 1000;
+    top: 0;
+    padding: 0 10px 0 10px;
+    position: sticky;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    background-color: var(--primary);
+  }
+  @media screen and (max-width: 780px) {
+    header {
+      height: 100px;
+    }
+  }
+</style>

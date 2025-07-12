@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "./color.css";
+@media only screen and (max-width: 1024px) {
+  .background-2::before {
+    top: 370px !important;
+    left: -40px !important;
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .background-3::before {
+    top: 170px !important;
+    right: -30px !important;
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .background-4::before {
+    bottom: -30px !important;
+    left: -30px !important;
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .background-1::before {
+    top: -30px !important;
+    left: -30px !important;
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+button:hover,
+a:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.margin-box-2 {
+  height: 100px;
+}
+.background-3 {
+  position: relative;
+  z-index: 1;
+}
+.background-3.in-view::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.background-3::before {
+  content: "";
+  background-color: var(--primary);
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 380px;
+  right: 90px;
+  width: 550px;
+  height: 250px;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.background-2 {
+  position: relative;
+  z-index: 1;
+}
+.background-2.in-view::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.background-2::before {
+  content: "";
+  background-color: var(--third);
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 80px;
+  left: -60px;
+  width: 250px;
+  height: 550px;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.background-1 {
+  position: relative;
+  z-index: 1;
+}
+.background-1.in-view::before {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.background-1::before {
+  content: "";
+  background-color: var(--secondary);
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: -50px;
+  right: -60px;
+  width: 600px;
+  height: 250px;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.banner-2 {
+  position: relative;
+  z-index: 100;
+  border-radius: 12px;
+  background: var(--components);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-prev {
+  left: -50px;
+  background: rgba(201, 193, 159, 0.6);
+}
+.btn-next {
+  right: -50px;
+  background: rgba(201, 193, 159, 0.6);
+}
+.z-index {
+  z-index: 1000;
+}
+.contact-container {
+  position: relative;
+  z-index: 100;
+  max-width: 600px;
+  width: 80%;
+  border-radius: 24px;
+  background-color: var(--components);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.contact-title {
+  color: var(--backgroundGrey);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px; /* 120% */
+}
+.form-input {
+  border-bottom: 1px solid var(--primary);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px; /* 171.429% */
+}
+.form-input::placeholder {
+  color: var(--backgroundGrey) !important;
+  font-weight: 200 !important;
+}
+.form-input.error {
+  border-bottom: 1px solid var(--danger);
+}
+
+.form-input:focus:invalid {
+  border-bottom: 1px solid var(--danger);
+}
+
+.form-btn {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  border-radius: 50px;
+  background: var(--primary);
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 200, 200, 0.1); /* soft glow */
+  color: var(--text);
+}
+
+.form-btn:hover {
+  background: var(--primary-hover); /* optional, or darken with rgba */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.form-btn:active {
+  background: var(--primary); /* stays same, or slightly darker */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px) scale(0.98);
+}
+@media only screen and (max-width: 780px) {
+  .contact-title {
+    color: var(--backgroundGrey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .form-input {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24px; /* 300% */
+  }
+}

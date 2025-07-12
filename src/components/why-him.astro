@@ -1,0 +1,347 @@
+---
+
+---
+
+<div
+  class="container-2 px-10 grid grid-cols-1 lg:grid-cols-2 justify-center items-center"
+>
+  <div class="flex lg:block justify-center order-2 lg:order-1">
+    <div class="background-5"></div>
+    <div class="why-banner items-start inline-flex flex-col gap-4">
+      <h4 class="title-why assets">De ce să alegi kineto.by.zevedei</h4>
+      <ul class="text-why list-disc list-inside">
+        <li>Formare profesională solidă</li>
+        <li>
+          Sunt licențiat în Fiziokinetoterapie la UMF Carol Davila și am
+          finalizat un masterat la UNEFS, cu specializare în recuperare și
+          performanță fizică.
+        </li>
+        <li>Certificări moderne și eficiente</li>
+        <li>
+          Dețin certificări în tehnici precum dry needling și terapie
+          chiropractică...
+        </li>
+        <li>Abordare personalizată</li>
+        <li>Fiecare persoană este unică, iar tratamentele sunt adaptate...</li>
+        <li>Empatie și atenție reală</li>
+        <li>Relația terapeutică începe cu ascultare și încredere...</li>
+        <li>Spațiu sigur și confortabil</li>
+        <li>Ședințele se desfășoară într-un mediu curat...</li>
+      </ul>
+      <button
+        class="contact-btn self-center md:self-auto px-9 py-3 flex justify-center items-center gap-2"
+      >
+        <p>Contactaţi-ne</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+        >
+          <path
+            d="M3.75 10.5L8.25 6L3.75 1.5"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="order-1 lg:order-2">
+    <div class="background-5"></div>
+    <div class="background-6"></div>
+
+    <div
+      class="relative w-full h-full p-10 flex items-center justify-center video-cont"
+    >
+      <!-- Replace with real <video> or <img> as needed -->
+      <video
+        class="lg:w-[500px] lg:h-[500px] h-64 w-64 object-cover"
+        poster="https://via.placeholder.com/300x300"
+        muted></video>
+
+      <!-- Play Button Overlay -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button class="bg-gray-500 bg-opacity-70 rounded-full p-4">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M6 4l10 6-10 6V4z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="background-7"></div>
+    <div class="background-8"></div>
+  </div>
+</div>
+<style>
+  button:hover {
+    background: var(--primary-hover); /* optional, or darken with rgba */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  .background-6 {
+    position: relative;
+    z-index: 1;
+  }
+  .background-6.in-view::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .background-6::before {
+    content: "";
+    background-color: var(--third);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  @media only screen and (max-width: 1024px) {
+    .background-6::before {
+      top: -30px !important;
+      right: -30px !important;
+      width: 200px !important;
+      height: 200px !important;
+    }
+    .background-7::before {
+      bottom: -30px !important;
+      right: -30px !important;
+      width: 200px !important;
+      height: 200px !important;
+    }
+    .background-8::before {
+      bottom: -30px !important;
+      left: -30px !important;
+      width: 200px !important;
+      height: 200px !important;
+    }
+    .background-5::before {
+      top: -30px !important;
+      left: -30px !important;
+      width: 200px !important;
+      height: 200px !important;
+    }
+  }
+  .background-7 {
+    position: relative;
+    z-index: 1;
+  }
+  .background-7.in-view::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .background-7::before {
+    content: "";
+    background-color: var(--secondary);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .background-8 {
+    position: relative;
+    z-index: 1;
+  }
+  .background-8.in-view::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .background-8::before {
+    content: "";
+    background-color: var(--secondary);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .background-5 {
+    position: relative;
+    z-index: 1;
+  }
+  .background-5.in-view::before {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .background-5::before {
+    content: "";
+    background-color: var(--third);
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .why-banner {
+    max-width: 600px;
+    z-index: 10;
+    position: relative;
+    padding: 44px;
+    border-radius: 24px;
+    background: var(--components);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .container-2 {
+    padding-top: 188px;
+    padding-bottom: 88px;
+    gap: 88px;
+  }
+  .text-blue {
+    color: var(--secondary);
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  .header-2 {
+    color: var(--textBlack);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    font-size: 48px;
+    font-weight: 150;
+    line-height: 93.2%; /* 44.736px */
+  }
+  .image-prim {
+    max-width: 500px;
+    max-height: 642px;
+    border-radius: 24px;
+    aspect-ratio: 665/841;
+  }
+  .text-btn {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .contact-btn {
+    height: 70px;
+    padding: 10px 16px 10px 16px;
+    border-radius: 50px;
+    background: var(--primary);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    gap: 8px;
+  }
+  .header-3 {
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 40px;
+    color: var(--text);
+  }
+  .banner {
+    padding: 24px;
+    background-color: var(--components);
+    gap: 44px;
+    border-radius: 0px 120px 120px 0px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 400px;
+  }
+  .top-text {
+    max-width: 645px;
+  }
+  .down-text {
+    max-width: 575px;
+  }
+  .top-container {
+    gap: 240;
+    padding-top: 100px;
+    padding-bottom: 188px;
+    border-bottom: 1px solid var(--third);
+  }
+
+  .heading {
+    font-size: 74px;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: 2px;
+    color: var(--textBlack);
+  }
+  .sub-text {
+    border-left: 3px solid var(--assets);
+    color: var(--components);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 130%;
+    padding-left: 6px;
+    width: 300px;
+  }
+  .video-cont {
+    border-radius: 24px;
+    background: var(--primary);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.55);
+    z-index: 100;
+  }
+  .contact-btn {
+    background-color: var(--primary);
+    color: var(--text);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+  }
+  .text-why {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25.6px; /* 160% */
+  }
+  .title-why {
+    color: var(--assets);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 56px;
+  }
+  @media only screen and (max-width: 700px) {
+    .text-why {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24x; /* 160% */
+    }
+    .title-why {
+      font-size: 28px;
+      font-weight: 200;
+      line-height: 28px;
+    }
+  }
+</style>

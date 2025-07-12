@@ -1,0 +1,201 @@
+---
+import Image1 from "../assets/images/certification.jpg";
+import Image2 from "../assets/images/certification-4.png";
+import Image3 from "../assets/images/certification-3.jpg";
+import Image4 from "../assets/images/certification-5.png";
+import Image5 from "../assets/images/certification-2.jpg";
+import Image from "astro/components/Image.astro";
+---
+
+<div class="container-3">
+  <div class="margin-box"></div>
+  <div
+    class="gap-20 pt-48 pb-20 px-8 grid lg:grid-cols-2 grid-cols-1 justify-items-center lg:justify-items-normal justify-center items-end"
+  >
+    <div
+      class="flex w-fit pb-11 flex-col justify-center items-start gap-6 max-w-[600px] text-box-1"
+    >
+      <div class="flex-col flex items-start">
+        <h2 class="name">Antonio Zevedei</h2>
+        <p class="hobby">Fiziokinetoterapeut</p>
+      </div>
+      <p class="big-text">Despre:</p>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center"
+      >
+        <p class="text-info">
+          Mă numesc Antonio Zevedei și sunt pasionat de sănătatea și echilibrul
+          corpului uman. Am absolvit Facultatea de Fiziokinetoterapie la UMF
+          Carol Davila din București, iar mai apoi am urmat un masterat în
+          cadrul UNEFS, aprofundând cunoștințele mele în recuperare fizică și
+          performanță motrică.
+        </p>
+        <p class="text-info">
+          De-a lungul timpului, am continuat să mă perfecționez, obținând
+          certificări în tehnici precum dry needling și terapie chiropractică,
+          metode moderne și eficiente în tratarea durerilor musculare, a
+          dezechilibrelor posturale și a disfuncțiilor articulare.
+        </p>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 justify-items-center lg:justify-items-normal gap-11 items-start justify-center"
+    >
+      <div
+        class="photo-banner-1 w-fit flex-col justify-center items-center py-9 px-9"
+      >
+        <Image
+          src={Image1}
+          alt="Imagine cu premiere "
+          class="max-h-[500px] w-auto img-1 bord-left"
+        />
+      </div>
+      <div
+        class="photo-banner-2 w-fit flex-col justify-center items-start py-9 px-9 gap-7 flex"
+      >
+        <Image
+          src={Image2}
+          alt="Imagine cu premiere "
+          class="max-h-64 w-auto self-center bord-right"
+        />
+        <Image
+          src={Image3}
+          alt="Imagine cu premiere "
+          class="max-h-64 w-auto self-center bord-right"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="gap-20 pt-20 pb-48 lg:px-8 px-11 grid grid-cols-1 justify-items-center lg:justify-items-normal lg:grid-cols-2 justify-center items-start"
+  >
+    <div
+      class="grid grid-cols-1 order-2 lg:order-1 justify-items-center lg:justify-items-normal lg:grid-cols-2 gap-11 items-start justify-center"
+    >
+      <div
+        class="photo-banner-1 w-fit flex-col justify-center items-center py-9 px-9"
+      >
+        <Image
+          src={Image4}
+          alt="Imagine cu premiere "
+          class="max-h-[500px] w-auto img-1 bord-left"
+        />
+      </div>
+      <div
+        class="photo-banner-2 w-fit flex-col justify-center items-center py-9 px-9"
+      >
+        <Image
+          src={Image5}
+          alt="Imagine cu premiere "
+          class="max-h-[500px] w-auto img-1 bord-right"
+        />
+      </div>
+    </div>
+    <div
+      class="flex order-1 lg:order-2 w-fit pt-11 flex-col justify-center items-start gap-6 max-w-[600px] text-box-2"
+    >
+      <p class="big-text">Povestea mea:</p>
+      <div class="flex gap-6 justify-center items-center">
+        <p class="text-info">
+          După ce am terminat facultatea, am simțit că încă nu îmi găsisem cu
+          adevărat drumul. Am lucrat o perioadă în domeniul imobiliarelor, până
+          când, într-o zi, un prieten mi-a cerut ajutorul pentru durerile lui de
+          spate. Atunci am realizat cât de mult îmi doresc să ajut oamenii să se
+          simtă mai bine, să își recapete mobilitatea și starea de bine. Din 27
+          septembrie 2020, m-am dedicat complet acestui domeniu. Am continuat cu
+          un masterat și am investit constant în cursuri și pregătire practică
+          pentru a le oferi pacienților mei tratamente eficiente și o experiență
+          cât mai profesionistă.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="margin-box-2"></div>
+</div>
+<style>
+  .img-1 {
+    min-height: 400px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 200px;
+  }
+  .margin-box-2 {
+    border-top: 1px solid var(--primary);
+    height: 100px;
+  }
+  .text-box-2 {
+    border-top: 1px solid var(--primary);
+  }
+  .text-box-1 {
+    border-bottom: 1px solid var(--primary);
+  }
+  .photo-banner-2 {
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
+    border-radius: 44px 24px 88px 24px;
+    background: var(--primary);
+  }
+  .photo-banner-1 {
+    border-radius: 24px 44px 24px 88px;
+    background: var(--primary);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .text-info {
+    color: var(--backgroundGrey);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px; /* 160% */
+  }
+  .big-text {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 56px; /* 175% */
+  }
+  .hobby {
+    color: var(--secondary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1px;
+  }
+  .name {
+    color: var(--assets);
+    font-size: 40px;
+    font-weight: 175;
+    line-height: 93.2%; /* 37.28px */
+    letter-spacing: 0.1px;
+  }
+  @media only screen and (max-width: 700px) {
+    .name {
+      font-size: 35px;
+    }
+    .hobby {
+      font-size: 16px;
+    }
+    .big-text {
+      font-size: 28px;
+    }
+    .text-info {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .margin-box {
+    border-bottom: 1px solid var(--primary);
+    height: 100px;
+  }
+  .container-3 {
+    background-color: var(--components);
+  }
+  .bord-left {
+    border-radius: 0px 44px;
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
+  }
+  .bord-right {
+    border-radius: 44px 0px;
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
+  }
+</style>

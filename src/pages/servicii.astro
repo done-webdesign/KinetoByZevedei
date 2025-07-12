@@ -1,0 +1,26 @@
+---
+import Contact from "../components/contact.astro";
+import Services from "../components/services.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+  window.addEventListener("load", () => {
+    if (window.location.hash === "#contact") {
+      // Prevent the default jump
+
+      const target = document.getElementById("contact");
+      if (target) {
+        // Next animation frame to ensure layout is settled
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "end" });
+        });
+      }
+    }
+  });
+</script>
+
+<Layout>
+  <Services />
+  <div id="contact"><Contact /></div>
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Image from "astro/components/Image.astro";
+import Logo from "../assets/images/logo-small.webp";
+import LogoText from "../assets/images/logo-text-small.webp";
+import InstaIcon from "../assets/images/insta-icon.svg";
+import TiktokIcon from "../assets/images/tiktok-icon.svg";
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("scroll-despre")?.addEventListener("click", () => {
+      document
+        .getElementById("despre-zevedei")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+</script>
+<footer class="grid grid-cols-2">
+  <div class="tabs-col p-6 flex flex-col justify-center items-center gap-9">
+    <div class="flex justify-center items-center lg:h-14 h-7">
+      <Image
+        src={Logo}
+        alt={"Kinetoterapie by zevedei logo"}
+        class="h-full w-auto object-contain"
+      />
+      <Image
+        src={LogoText}
+        alt={"Kinetoterapie by zevedei text logo "}
+        class="h-full w-auto object-contain"
+      />
+    </div>
+    <div class="flex flex-col justify-center items-center gap-9">
+      <a href="/servicii" class="options color-2">Serviciile noastre</a>
+      <a id="scroll-despre" class="options color-2">Despre Zevedei</a>
+      <a href="/servicii#contact" class="options color-1">CONTACTEAZA-NE</a>
+    </div>
+  </div>
+  <div class="flex justify-center items-center">
+    <div class="flex flex-col gap-4 justify-center items-center">
+      <a
+        href="https://www.tiktok.com/@kineto.by.zevedei?is_from_webapp=1&sender_device=pc"
+        class="lg:flex hidden h-20 justify-end items-center social self-stretch shadow"
+        target="_blank"
+      >
+        <p class="ms-3 social-link">TikTok: kineto.by.zevedei</p>
+        <div class="social-box items-center justify-center flex self-end">
+          <Image src={TiktokIcon} alt="Tiktok icon" />
+        </div>
+      </a>
+      <a
+        href="https://www.tiktok.com/@kineto.by.zevedei?is_from_webapp=1&sender_device=pc"
+        class="social-box-mobile items-center lg:hidden justify-center flex self-end"
+        target="_blank"
+      >
+        <Image src={TiktokIcon} alt="Tiktok icon" />
+      </a>
+      <a
+        href="https://www.instagram.com/kineto.by.zevedei?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="hidden lg:flex h-20 justify-end items-center social self-stretch shadow"
+        target="_blank"
+      >
+        <p class="ms-3 social-link">Insta: kineto.by.zevedei</p>
+        <div class="social-box items-center justify-center flex self-end">
+          <Image src={InstaIcon} alt="Instagram icon" />
+        </div>
+      </a>
+      <a
+        href="https://www.instagram.com/kineto.by.zevedei?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="social-box-mobile lg:hidden items-center justify-center flex self-end"
+        target="_blank"
+      >
+        <Image src={InstaIcon} alt="Instagram icon" />
+      </a>
+    </div>
+  </div>
+</footer>
+<style>
+  .shadow {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  .social-box-mobile {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px 12px 12px 12px;
+    background: var(--primary);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  .social-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px 12px 0px 0px;
+    background: var(--primary);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  .social-link {
+    opacity: 0.5;
+    color: var(--backgroundGrey);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+  }
+
+  .social {
+    gap: 70px;
+    border-bottom: 1px solid var(--primary);
+  }
+  .color-1 {
+    color: var(--assets);
+  }
+  .color-2 {
+    color: var(--text);
+  }
+  .options {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 34px; /* 100% */
+  }
+  @media only screen and (max-width: 1024px) {
+    .options {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 14px; /* 150% */
+    }
+  }
+  footer {
+    background-color: var(--components);
+    height: 400px;
+  }
+  .tabs-col {
+    border-radius: 0px 120px 120px 0px;
+    background: var(--primary);
+  }
+</style>
