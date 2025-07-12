@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 
 const videos = [
-  "/public/videos/video-1.mp4",
-  "/public/videos/video-2.mp4",
-  "/public/videos/video-3.mp4",
-  "/public/videos/video-4.mp4",
+  "/videos/video-1.mp4",
+  "/videos/video-2.mp4",
+  "/videos/video-3.mp4",
+  "/videos/video-4.mp4",
 ];
 
 export default function VideoCarousel() {
