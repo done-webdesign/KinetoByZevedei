@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 const videos = [
   "/videos/video-1.mp4",
   "/videos/video-2.mp4",
-  "/videos/video-3.mp4",
+  "/videos/video-5.mp4",
   "/videos/video-4.mp4",
 ];
 

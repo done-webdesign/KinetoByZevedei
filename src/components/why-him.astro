@@ -1,5 +1,5 @@
 ---
-
+import Video from "/public/videos/video-3.mp4";
 ---
 
 <div
@@ -58,22 +58,10 @@
     >
       <!-- Replace with real <video> or <img> as needed -->
       <video
-        class="lg:w-[500px] lg:h-[500px] h-64 w-64 object-cover"
-        poster="https://via.placeholder.com/300x300"
+        class="lg:w-[500px] lg:h-[500px] h-84 w-64 object-cover"
+        src={Video}
+        controls
         muted></video>
-
-      <!-- Play Button Overlay -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <button class="bg-gray-500 bg-opacity-70 rounded-full p-4">
-          <svg
-            class="w-6 h-6 text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M6 4l10 6-10 6V4z"></path>
-          </svg>
-        </button>
-      </div>
     </div>
     <div class="background-7"></div>
     <div class="background-8"></div>
