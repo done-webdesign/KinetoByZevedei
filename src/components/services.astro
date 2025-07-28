@@ -284,6 +284,9 @@ import Image6 from "../assets/images/IMG_1613.webp";
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   .image-contaier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 300px;
     contain: content;
@@ -297,40 +300,19 @@ import Image6 from "../assets/images/IMG_1613.webp";
       height: 200px !important;
     }
   }
-  .text-service {
-    bottom: 120px;
-    left: 10px;
-    color: var(--text);
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: normal;
-  }
+  .text-service,
+  .text-service-2,
+  .text-service-3,
   .text-service-4 {
-    bottom: 120px;
-    color: var(--text);
+    left: 0;
+    right: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
     font-weight: 300;
-    line-height: normal;
-  }
-  .text-service-2 {
-    bottom: 120px;
-    right: 10px;
     color: var(--text);
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: normal;
-  }
-  .text-service-3 {
-    bottom: 120px;
-    left: 50px;
-    color: var(--text);
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: normal;
   }
 
   .heading {
@@ -353,7 +335,7 @@ import Image6 from "../assets/images/IMG_1613.webp";
 
       right: 0 !important;
       text-align: center !important;
-      bottom: 0 !important;
+      bottom: 80px !important;
       left: 0 !important;
       justify-self: center;
       align-self: anchor-center;
