@@ -55,9 +55,11 @@ export default function VideoCarousel() {
             <ReactPlayer
               playing={false} // only play when clicked
               controls={true}
+              light={false}
               src={src}
               width="250px"
               height="500px"
+              playsInline
               muted
             />
           </div>
