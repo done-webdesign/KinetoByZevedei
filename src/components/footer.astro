@@ -7,14 +7,26 @@ import TiktokIcon from "../assets/images/tiktok-icon.svg";
 ---
 
 <script>
+  function attachScrollListener() {
+    const button = document.getElementById("scroll-despre");
+    const target = document.getElementById("despre-zevedei");
+
+    if (button && target) {
+      button.addEventListener("click", () => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("scroll-despre")?.addEventListener("click", () => {
-      document
-        .getElementById("despre-zevedei")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    attachScrollListener();
+
+    // Optional: retry in case footer is hydrated later
+    const observer = new MutationObserver(attachScrollListener);
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 </script>
+
 <footer class="grid grid-cols-2">
   <div class="tabs-col p-6 flex flex-col justify-center items-center gap-9">
     <div class="flex justify-center items-center lg:h-14 h-7">
@@ -31,7 +43,7 @@ import TiktokIcon from "../assets/images/tiktok-icon.svg";
     </div>
     <div class="flex flex-col justify-center items-center gap-9">
       <a href="/servicii" class="options color-2">Serviciile noastre</a>
-      <a id="scroll-despre" class="options color-2">Despre Zevedei</a>
+      <button id="scroll-despre" class="options color-2">Despre Zevedei</button>
       <a href="/servicii#contact" class="options color-1">CONTACTEAZA-NE</a>
     </div>
   </div>
@@ -74,6 +86,7 @@ import TiktokIcon from "../assets/images/tiktok-icon.svg";
     </div>
   </div>
 </footer>
+
 <style>
   .shadow {
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
