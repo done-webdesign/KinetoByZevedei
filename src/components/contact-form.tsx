@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 interface FormData {
   emailOrPhone: string;
   fullName: string;
@@ -122,6 +121,13 @@ const ContactForm = () => {
             />
           </svg>
         </button>
+        <p className="text-white text-[20px] font-light ">sau</p>
+        <a
+          href="tel:+40725651009"
+          className="form-btn px-9 py-4 flex justify-center items-center gap-2"
+        >
+          072 561 009 <img src="/phone-icon.svg" alt="Phone  icon" />
+        </a>
 
         {status && <p className="text-sm mt-4">{status}</p>}
       </form>
