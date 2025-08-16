@@ -126,7 +126,7 @@ const ContactForm = () => {
           href="tel:+40725651009"
           className="form-btn px-9 py-4 flex justify-center items-center gap-2"
         >
-          072 561 009 <img src="/phone-icon.svg" alt="Phone  icon" />
+          072 565 1009 <img src="/phone-icon.svg" alt="Phone  icon" />
         </a>
 
         {status && <p className="text-sm mt-4">{status}</p>}
