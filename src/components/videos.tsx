@@ -35,14 +35,16 @@ export default function VideoCarousel() {
           {videos.map((src, i) => (
             <div key={i} className="shrink-0 snap-start rounded-2xl">
               <video
-                src={src}
                 className="w-[250px] h-[500px] object-cover rounded-2xl"
                 controls
-                preload="none"
+                preload="metadata"
                 playsInline
                 muted
                 poster={smallLogo.src}
-              />
+              >
+                <source src={src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           ))}
         </div>
