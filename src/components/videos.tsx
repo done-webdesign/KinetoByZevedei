@@ -17,17 +17,17 @@ export default function VideoCarousel() {
   };
 
   return (
-    <div className="px-9 py-12 lg:px-0 relative">
+    <div className="px-4 py-8 lg:px-0 relative">
       {/* Background shapes */}
       <div className="background-1"></div>
       <div className="background-2"></div>
       <div className="background-3"></div>
 
       {/* Native scroll-snap carousel */}
-      <div className="relative banner-2 p-5 md:p-11">
+      <div className="relative banner-2 p-3 md:p-8 lg:p-11">
         <div
           ref={scroller}
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+          className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
           style={{ scrollPaddingInline: 16 }}
           aria-label="Video gallery"
         >

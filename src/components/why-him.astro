@@ -55,7 +55,7 @@
     <div class="background-6"></div>
 
     <div
-      class="relative w-full h-full p-10 flex items-center justify-center video-cont"
+      class="relative w-full h-full p-4 md:p-8 lg:p-10 flex items-center justify-center video-cont"
     >
       <!-- Replace with real <video> or <img> as needed -->
       <video
@@ -107,27 +107,40 @@
     .background-6::before {
       top: -30px !important;
       right: -30px !important;
-      width: 200px !important;
-      height: 200px !important;
+      width: 180px !important;
+      height: 180px !important;
     }
     .background-7::before {
       bottom: -30px !important;
       right: -30px !important;
-      width: 200px !important;
-      height: 200px !important;
+      width: 180px !important;
+      height: 180px !important;
     }
     .background-8::before {
       bottom: -30px !important;
       left: -30px !important;
-      width: 200px !important;
-      height: 200px !important;
+      width: 180px !important;
+      height: 180px !important;
     }
     .background-5::before {
       top: -30px !important;
       left: -30px !important;
-      width: 200px !important;
-      height: 200px !important;
+      width: 180px !important;
+      height: 180px !important;
     }
+  }
+  @media only screen and (max-width: 640px) {
+    .background-6::before,
+    .background-7::before,
+    .background-8::before,
+    .background-5::before {
+      width: 160px !important;
+      height: 160px !important;
+    }
+    .background-6::before { top: -20px !important; right: -20px !important; }
+    .background-7::before { bottom: -20px !important; right: -20px !important; }
+    .background-8::before { bottom: -20px !important; left: -20px !important; }
+    .background-5::before { top: -20px !important; left: -20px !important; }
   }
   .background-7 {
     position: relative;
