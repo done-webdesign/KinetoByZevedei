@@ -5,6 +5,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  // Used for generating absolute URLs (canonical, OG) and images
+  site: "https://kinetobyzevedei.com",
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],

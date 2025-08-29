@@ -5,41 +5,51 @@ import Insta from "../assets/icons/insta-icon.svg";
 import Image from "astro/components/Image.astro";
 import "../styles/global.css";
 import Footer from "../components/footer.astro";
+
+// Per-page SEO props with sensible defaults
+const {
+  title =
+    "Masaj Terapeutic, Kinetoterapie & Dry Needling în București | Kineto By Zevedei",
+  description =
+    "Licențiat UMF Carol Davila, ofer masaj terapeutic, dry needling, acupunctură și chiropractica în București. Tratamente personalizate pentru dureri, relaxare și recuperare fizică.",
+} = Astro.props;
+
+// Build canonical URL once in frontmatter (safer than JSX IIFE)
+const canonicalUrl = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).toString()
+  : Astro.url?.pathname ?? "/";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/small-logo.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      Masaj Terapeutic, Kinetoterapie & Dry Needling în București | Kineto By
-      Zevedei
-    </title>
-    <meta
-      name="description"
-      content="Licențiat UMF Carol Davila, ofer masaj terapeutic, dry needling, acupunctură și chiropractica în București. Tratamente personalizate pentru dureri, relaxare și recuperare fizică."
-    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="ro-RO" href={canonicalUrl} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="masaj terapeutic București, fizioterapie, kinetoterapie, dry needling, acupunctură, chiropractica, recuperare fizică, dureri musculare, terapie fizică, Zevedei Terapie"
     />
-    <meta
-      property="og:title"
-      content="Masaj Terapeutic & Kinetoterapie în București | Kineto By Zevedei"
-    />
-    <meta
-      property="og:description"
-      content="Servicii personalizate de masaj terapeutic, dry needling, chiropractica și acupunctură pentru relaxare, dureri musculare și recuperare fizică în București."
-    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="ro_RO" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kinetobyzevedei.com/" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta
       property="og:image"
       content="https://kinetobyzevedei.com/small-logo.jpg"
     />
+    <meta property="og:image:alt" content="Kineto by Zevedei logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://kinetobyzevedei.com/small-logo.jpg" />
     <!-- Google Tag Manager -->
     <script is:inline>
       (function (w, d, s, l, i) {
@@ -61,7 +71,46 @@ import Footer from "../components/footer.astro";
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link href="src/styles/global.css" rel="stylesheet" />
+    
+    <script type="application/ld+json" is:inline>
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "@id": "https://kinetobyzevedei.com/#business",
+        name: "Kineto by Zevedei",
+        url: "https://kinetobyzevedei.com/",
+        image: "https://kinetobyzevedei.com/small-logo.jpg",
+        logo: "https://kinetobyzevedei.com/small-logo.jpg",
+        description:
+          "Masaj terapeutic, kinetoterapie și dry needling la domiciliu în București.",
+        telephone: "+40725651009",
+        areaServed: [
+          "București",
+          "Sector 1",
+          "Sector 2",
+          "Sector 3",
+          "Sector 4",
+          "Sector 5",
+          "Sector 6"
+        ],
+        priceRange: "lei",
+        medicalSpecialty: ["Physiotherapy", "Chiropractic", "Acupuncture"],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Servicii",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Masaj terapeutic la domiciliu" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Kinetoterapie la domiciliu" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Dry needling" } }
+          ]
+        },
+        founder: { "@type": "Person", name: "Antonio Zevedei" },
+        sameAs: [
+          "https://www.instagram.com/kineto.by.zevedei/",
+          "https://www.tiktok.com/@kineto.by.zevedei"
+        ]
+      })}
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -80,6 +129,7 @@ import Footer from "../components/footer.astro";
       <p>
         Tik Tok : <a
           target="_blank"
+          rel="noopener noreferrer"
           class="social"
           href="https://www.tiktok.com/@kineto.by.zevedei">kineto.by.zevedei</a
         >
@@ -88,6 +138,7 @@ import Footer from "../components/footer.astro";
       <p>
         Insta : <a
           target="_blank"
+          rel="noopener noreferrer"
           class="social"
           href="https://www.instagram.com/kineto.by.zevedei/"
           >kineto.by.zevedei</a

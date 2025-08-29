@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Kinetoterapie în București – la domiciliu | Kineto By Zevedei"
+  description="Kinetoterapie la domiciliu în București (sectoarele 1–6). Recuperare funcțională, exerciții terapeutice și posturale."
+>
+  <section class="bg-[var(--components)] text-[var(--text)] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-light mb-4">Kinetoterapie în București – la domiciliu</h1>
+      <p class="text-lg text-[var(--backgroundGrey)] mb-6">
+        Ședințe de <strong>kinetoterapie</strong> la domiciliu pentru recuperare funcțională,
+        reducerea durerilor și îmbunătățirea posturii. Program adaptat nivelului tău.
+      </p>
+      <ul class="list-disc list-inside mb-8 text-[var(--backgroundGrey)]">
+        <li>Recuperare după accidentări sau intervenții</li>
+        <li>Corectarea dezechilibrelor și a posturii</li>
+        <li>Întărirea musculaturii profunde și mobilitate</li>
+      </ul>
+
+      <a href="/servicii#contact" class="inline-flex items-center gap-2 bg-[var(--assets)] text-[var(--text)] px-4 py-3 rounded-xl shadow">
+        Programează o ședință
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3.75 10.5L8.25 6L3.75 1.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-light mb-4">Întrebări frecvente</h2>
+        <div class="space-y-4 text-[var(--backgroundGrey)]">
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Poți veni în toate sectoarele?</summary><p class="mt-2">Da, acopăr sectoarele 1–6 ale Bucureștiului.</p></details>
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Ce include o ședință?</summary><p class="mt-2">Evaluare inițială, plan de exerciții, tehnici manuale după caz și monitorizare progres.</p></details>
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Am nevoie de echipament?</summary><p class="mt-2">Nu, folosim echipament minim. Îți arăt exerciții pe care le poți face acasă în siguranță.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {"@type":"Question", name:"Poți veni în toate sectoarele?", acceptedAnswer:{"@type":"Answer", text:"Da, acopăr sectoarele 1–6 ale Bucureștiului."}},
+        {"@type":"Question", name:"Ce include o ședință?", acceptedAnswer:{"@type":"Answer", text:"Evaluare, plan de exerciții, tehnici manuale și monitorizare progres."}},
+        {"@type":"Question", name:"Am nevoie de echipament?", acceptedAnswer:{"@type":"Answer", text:"Nu. Exercițiile sunt adaptate mediului de acasă."}}
+      ]
+    })}
+  </script>
+</Layout>
+

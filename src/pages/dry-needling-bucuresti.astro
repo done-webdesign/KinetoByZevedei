@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Dry Needling în București – la domiciliu | Kineto By Zevedei"
+  description="Dry needling la domiciliu în București pentru puncte trigger și dureri musculare. Sigur, eficient și personalizat."
+>
+  <section class="bg-[var(--components)] text-[var(--text)] px-6 py-16">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-light mb-4">Dry Needling în București – la domiciliu</h1>
+      <p class="text-lg text-[var(--backgroundGrey)] mb-6">
+        <strong>Dry needling</strong> este o tehnică modernă pentru tratarea punctelor trigger și a durerilor
+        musculare. Procedura este realizată în condiții de maximă igienă, la domiciliul tău.
+      </p>
+      <ul class="list-disc list-inside mb-8 text-[var(--backgroundGrey)]">
+        <li>Reducerea durerii și relaxarea musculaturii</li>
+        <li>Creșterea mobilității și recuperare mai rapidă</li>
+        <li>Complementar masajului terapeutic și kinetoterapiei</li>
+      </ul>
+
+      <a href="/servicii#contact" class="inline-flex items-center gap-2 bg-[var(--assets)] text-[var(--text)] px-4 py-3 rounded-xl shadow">
+        Programează o ședință
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3.75 10.5L8.25 6L3.75 1.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-light mb-4">Întrebări frecvente</h2>
+        <div class="space-y-4 text-[var(--backgroundGrey)]">
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Este dureros?</summary><p class="mt-2">Poate exista un disconfort ușor și trecător. Intensitatea se adaptează toleranței tale.</p></details>
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Este sigur?</summary><p class="mt-2">Da, igiena este strictă, cu ace sterile de unică folosință și protocol profesional.</p></details>
+          <details class="bg-[var(--primary)]/30 p-4 rounded-lg"><summary class="font-medium">Câte ședințe sunt necesare?</summary><p class="mt-2">Depinde de severitate și răspunsul corpului. De obicei 2–4 ședințe.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" is:inline>
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {"@type":"Question", name:"Este dureros?", acceptedAnswer:{"@type":"Answer", text:"Poate exista un disconfort ușor și trecător. Intensitatea este adaptată nevoilor tale."}},
+        {"@type":"Question", name:"Este sigur?", acceptedAnswer:{"@type":"Answer", text:"Da. Se folosesc ace sterile de unică folosință și se respectă protocoalele de igienă."}},
+        {"@type":"Question", name:"Câte ședințe sunt necesare?", acceptedAnswer:{"@type":"Answer", text:"În general 2–4 ședințe, în funcție de caz."}}
+      ]
+    })}
+  </script>
+</Layout>
+
