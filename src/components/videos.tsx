@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import smallLogo from "../assets/images/logo-small.webp";
 
 const videos = [
   "/videos/video-1.mp4",
@@ -40,7 +41,7 @@ export default function VideoCarousel() {
                 preload="none"
                 playsInline
                 muted
-                poster="/small-logo.jpg"
+                poster={smallLogo.src}
               />
             </div>
           ))}

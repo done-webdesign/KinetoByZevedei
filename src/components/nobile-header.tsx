@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // optional
+import smallLogo from "../assets/images/small-logo.webp";
 
 export default function MobileDropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +15,17 @@ export default function MobileDropdownMenu() {
       {/* Header bar */}
       <div className="flex  justify-between items-center h-28 px-11 py-2.5 ">
         <a href="/" className="self-end">
-          {" "}
-          <img src="/small-logo.jpg" alt="Logo" className="h-20 self-end" />
+          <img src={smallLogo.src} alt="Logo" className="h-20  self-end" />
         </a>
 
-        <a
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-white"
           aria-label="Toggle menu"
+          type="button"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </a>
+        </button>
       </div>
 
       {/* Dropdown menu */}

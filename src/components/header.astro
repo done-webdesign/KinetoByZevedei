@@ -16,7 +16,13 @@ import MobileDropdownMenu from "./nobile-header";
 
 <header class="lg:flex hidden">
   <a class="img-nah" href="/">
-    <Image class="logo-img" src={logo} alt="Kinetoterapie by zevedei logo" />
+    <Image
+      class="logo-img"
+      src={logo}
+      alt="Kinetoterapie by zevedei logo"
+      widths={[300, 400, 626]}
+      sizes="(max-width: 1124px) 400px, 626px"
+    />
   </a>
 
   <div class="flex justify-between max-w-[600px] w-full items-center">
