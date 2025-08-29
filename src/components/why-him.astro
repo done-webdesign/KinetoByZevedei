@@ -57,17 +57,22 @@
     <div
       class="relative w-full h-full p-4 md:p-8 lg:p-10 flex items-center justify-center video-cont"
     >
-      <video
-        class="lg:w-[500px] lg:h-[500px] h-84 w-64 object-cover"
-        controls
-        muted
-        preload="metadata"
-        poster="/small-logo.jpg"
-        playsinline
-      >
-        <source src="/videos/video-3.mp4" type="video/mp4" />
-        Browserul tău nu suportă elementul video.
-      </video>
+      <div class="relative cursor-pointer select-none" id="whyhim-wrapper" role="button" tabindex="0">
+        <video
+          id="whyhim-video"
+          class="lg:w-[500px] lg:h-[500px] h-84 w-64 object-cover rounded-2xl shadow"
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="/videos/video-3.mp4" type="video/mp4" />
+        </video>
+        <div id="whyhim-indicator" class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200">
+          <!-- Icon injected by script based on state -->
+        </div>
+      </div>
     </div>
     <div class="background-7"></div>
     <div class="background-8"></div>
@@ -366,3 +371,33 @@
     }
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.getElementById('whyhim-wrapper');
+    const vid = document.getElementById('whyhim-video');
+    const ind = document.getElementById('whyhim-indicator');
+    if (!(wrapper instanceof HTMLElement) || !(vid instanceof HTMLVideoElement) || !(ind instanceof HTMLElement)) return;
+
+    const renderIcon = () => {
+      ind.innerHTML = vid.paused
+        ? '<svg width="64" height="64" viewBox="0 0 24 24" fill="white" class="bg-black/40 rounded-full p-3"><path d="M8 5v14l11-7z"></path></svg>'
+        : '<svg width="64" height="64" viewBox="0 0 24 24" fill="white" class="bg-black/40 rounded-full p-3"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>';
+    };
+
+    const flash = () => {
+      renderIcon();
+      ind.style.opacity = '1';
+      window.setTimeout(() => (ind.style.opacity = '0'), 700);
+    };
+
+    const toggle = () => {
+      if (vid.paused) vid.play().catch(() => {}); else vid.pause();
+      flash();
+    };
+
+    wrapper.addEventListener('click', toggle);
+    wrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+</script>
