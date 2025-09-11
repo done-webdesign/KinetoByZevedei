@@ -131,14 +131,14 @@ const canonicalUrl = Astro.site
     >
     <!-- End Google Tag Manager (noscript) -->
     <div
-      class="head-social hidden lg:flex justify-end self-stretch items-center"
+      class="hidden lg:flex justify-end self-stretch items-center bg-[#ebebeb] h-16 px-[88px] gap-[14px] text-[var(--textBlack)] text-center text-[16px] font-bold leading-6"
     >
       <Image src={Tiktok} alt="Tiktok icon for social page" />
       <p>
         Tik Tok : <a
           target="_blank"
           rel="noopener noreferrer"
-          class="social"
+          class="hover:text-[var(--secondary)] hover:underline"
           href="https://www.tiktok.com/@kineto.by.zevedei">kineto.by.zevedei</a
         >
       </p>
@@ -147,7 +147,7 @@ const canonicalUrl = Astro.site
         Insta : <a
           target="_blank"
           rel="noopener noreferrer"
-          class="social"
+          class="hover:text-[var(--secondary)] hover:underline"
           href="https://www.instagram.com/kineto.by.zevedei/"
           >kineto.by.zevedei</a
         >
@@ -159,38 +159,4 @@ const canonicalUrl = Astro.site
   </body>
 </html>
 
-<style>
-  .social:hover {
-    color: var(--secondary);
-    text-decoration: underline;
-  }
-  html,
-  body {
-    scroll-behavior: smooth;
-    overflow: auto;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: "Poppins", sans-serif !important;
-  }
-  html {
-    box-sizing: border-box;
-  }
-
-  .head-social {
-    background-color: #ebebeb;
-    height: 64px;
-    padding: 0 88px 0 88px;
-    gap: 14px;
-    color: var(--textBlack);
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-  }
-  @media only screen and (max-width: 1024px) {
-    body {
-      padding-top: 30px;
-    }
-  }
-</style>
+<!-- Inline styles removed; base styles moved to global.css and Tailwind classes -->

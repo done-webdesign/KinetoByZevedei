@@ -14,10 +14,10 @@ import MobileDropdownMenu from "./nobile-header";
   });
 </script>
 
-<header class="lg:flex hidden">
-  <a class="img-nah" href="/">
+<header class="lg:flex hidden sticky top-0 z-[1000] px-[10px] justify-between items-center h-[140px] bg-[var(--primary)] md:h-[100px]">
+  <a href="/">
     <Image
-      class="logo-img"
+      class="w-[626px] h-[88px] md:w-[400px] md:h-auto hover:!scale-100"
       src={logo}
       alt="Kinetoterapie by zevedei logo"
       widths={[300, 400, 626]}
@@ -26,76 +26,16 @@ import MobileDropdownMenu from "./nobile-header";
   </a>
 
   <div class="flex justify-between max-w-[600px] w-full items-center">
-    <a href="/servicii" class="nav-btn">Serviciile noastre</a>
-    <button id="scroll-despre" class="nav-btn">Despre Zevedei</button>
+    <a href="/servicii" class="bg-transparent border-0 text-[var(--text)] text-[16px] font-normal leading-[100%] hover:!scale-100 md:text-[14px] md:font-light md:leading-[90%]">Serviciile noastre</a>
+    <button id="scroll-despre" class="bg-transparent border-0 text-[var(--text)] text-[16px] font-normal leading-[100%] hover:!scale-100 md:text-[14px] md:font-light md:leading-[90%]">Despre Zevedei</button>
     <a
       href="/servicii#contact"
-      class="contact-btn flex justify-center items-center">Contacteaza-ne</a
+      class="flex justify-center items-center px-[30px] py-[18px] text-[var(--text)] text-[14px] font-extrabold leading-6 uppercase w-[200px] h-[50px] rounded-[24px] bg-[var(--assets)] transition-transform hover:scale-105"
+      >Contacteaza-ne</a
     >
   </div>
 </header>
 <div class="lg:hidden">
   <MobileDropdownMenu client:idle />
 </div>
-<style>
-  .logo-img {
-    width: 626px;
-    height: 88px;
-  }
-  .img-nah {
-    transform: none !important;
-  }
-  @media only screen and (max-width: 1124px) {
-    .logo-img {
-      width: 400px;
-      height: auto;
-    }
-  }
-  .contact-btn {
-    padding: 18px 30px 18px 30px;
-    color: var(--text);
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 24px;
-    text-transform: uppercase;
-    width: 200px;
-    height: 50px;
-    border-radius: 24px;
-    background-color: var(--assets);
-  }
-  .contact-btn:hover {
-    transform: scale(1.05);
-  }
-  .nav-btn {
-    background-color: transparent;
-    border: 0;
-    color: var(--text);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 100%;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  }
-  @media only screen and (max-width: 1024px) {
-    .nav-btn {
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 90%; /* 150% */
-    }
-  }
-  header {
-    z-index: 1000;
-    top: 0;
-    padding: 0 10px 0 10px;
-    position: sticky;
-
-    justify-content: space-between;
-    align-items: center;
-    height: 140px;
-    background-color: var(--primary);
-  }
-  @media screen and (max-width: 780px) {
-    header {
-      height: 100px;
-    }
-  }
-</style>
+<!-- Tailwind utility classes set on elements; inline styles removed -->

@@ -7,30 +7,30 @@ import Image5 from "../assets/images/certification-2.webp";
 import Image from "astro/components/Image.astro";
 ---
 
-<div class="container-3">
-  <div class="margin-box"></div>
+<div class="c-about bg-[var(--components)]">
+  <div class="border-b border-[var(--primary)] h-[100px] max-[640px]:h-[56px]"></div>
   <div
     class="gap-14 lg:gap-20 pt-20 lg:pt-48 pb-12 lg:pb-20 px-6 lg:px-8 grid lg:grid-cols-2 grid-cols-1 justify-items-center lg:justify-items-normal justify-center items-end"
   >
     <div
-      class="flex w-fit pb-11 flex-col justify-center items-start gap-6 max-w-[600px] text-box-1"
+      class="flex w-fit pb-11 flex-col justify-center items-start gap-6 max-w-[600px] border-b border-[var(--primary)]"
     >
       <div class="flex-col flex items-start">
-        <h2 class="name">Antonio Zevedei</h2>
-        <p class="hobby">Fiziokinetoterapeut</p>
+        <h2 class="text-[var(--assets)] text-[40px] font-extralight leading-[93.2%] tracking-[0.1px]">Antonio Zevedei</h2>
+        <p class="text-[var(--secondary)] text-[18px] font-normal tracking-[0.1px]">Fiziokinetoterapeut</p>
       </div>
-      <p class="big-text">Despre:</p>
+      <p class="text-[var(--text)] text-[32px] font-extralight leading-[56px]">Despre:</p>
       <div
         class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center"
       >
-        <p class="text-info">
+        <p class="text-[var(--backgroundGrey)] text-[16px] font-normal leading-[25.6px]">
           Mă numesc Antonio Zevedei și sunt pasionat de sănătatea și echilibrul
           corpului uman. Am absolvit Facultatea de Fiziokinetoterapie la UMF
           Carol Davila din București, iar mai apoi am urmat un masterat în
           cadrul UNEFS, aprofundând cunoștințele mele în recuperare fizică și
           performanță motrică.
         </p>
-        <p class="text-info">
+        <p class="text-[var(--backgroundGrey)] text-[16px] font-normal leading-[25.6px]">
           De-a lungul timpului, am continuat să mă perfecționez, obținând
           certificări în tehnici precum dry needling și terapie chiropractică,
           metode moderne și eficiente în tratarea durerilor musculare, a
@@ -42,25 +42,25 @@ import Image from "astro/components/Image.astro";
       class="grid grid-cols-1 lg:grid-cols-2 justify-items-center lg:justify-items-normal gap-11 items-start justify-center"
     >
       <div
-        class="photo-banner-1 w-fit flex-col justify-center items-center py-9 px-9"
+        class="w-fit flex-col justify-center items-center py-9 px-9 rounded-[24px_44px_24px_88px] bg-[var(--primary)] shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
       >
         <Image
           loading="lazy"
           src={Image1}
           alt="Imagine cu premiere "
-          class="max-h-[500px] w-auto img-1 bord-left"
+          class="max-h-[500px] w-auto min-h-[400px] rounded-tr-[44px] rounded-br-[44px] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
           widths={[200, 300, 400]}
           sizes="(max-width: 1024px) 200px, 300px"
         />
       </div>
       <div
-        class="photo-banner-2 w-fit flex-col justify-center items-start py-9 px-9 gap-7 flex"
+        class="w-fit flex-col justify-center items-start py-9 px-9 gap-7 flex rounded-[44px_24px_88px_24px] bg-[var(--primary)] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
       >
         <Image
           loading="lazy"
           src={Image2}
           alt="Imagine cu premiere "
-          class="max-h-64 w-auto self-center bord-right"
+          class="max-h-64 w-auto self-center rounded-tl-[44px] rounded-bl-[44px] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
           widths={[200, 300, 400]}
           sizes="(max-width: 1024px) 200px, 300px"
         />
@@ -68,7 +68,7 @@ import Image from "astro/components/Image.astro";
           loading="lazy"
           src={Image3}
           alt="Imagine cu premiere "
-          class="max-h-64 w-auto self-center bord-right"
+          class="max-h-64 w-auto self-center rounded-tl-[44px] rounded-bl-[44px] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
           widths={[200, 300, 400]}
           sizes="(max-width: 1024px) 200px, 300px"
         />
@@ -82,36 +82,36 @@ import Image from "astro/components/Image.astro";
       class="grid grid-cols-1 order-2 lg:order-1 justify-items-center lg:justify-items-normal lg:grid-cols-2 gap-11 items-start justify-center"
     >
       <div
-        class="photo-banner-1 w-fit flex-col justify-center items-center py-9 px-9"
+        class="w-fit flex-col justify-center items-center py-9 px-9 rounded-[24px_44px_24px_88px] bg-[var(--primary)] shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
       >
         <Image
           loading="lazy"
           src={Image4}
           alt="Imagine cu premiere "
-          class="max-h-[500px] w-auto img-1 bord-left"
+          class="max-h-[500px] w-auto min-h-[400px] rounded-tr-[44px] rounded-br-[44px] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
           widths={[200, 300, 400]}
           sizes="(max-width: 1024px) 200px, 300px"
         />
       </div>
       <div
-        class="photo-banner-2 w-fit flex-col justify-center items-center py-9 px-9"
+        class="w-fit flex-col justify-center items-center py-9 px-9 rounded-[44px_24px_88px_24px] bg-[var(--primary)] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
       >
         <Image
           loading="lazy"
           src={Image5}
           alt="Imagine cu premiere "
-          class="max-h-[500px] w-auto img-1 bord-right"
+          class="max-h-[500px] w-auto min-h-[400px] rounded-tl-[44px] rounded-bl-[44px] shadow-[1px_4px_4px_rgba(0,0,0,0.61)]"
           widths={[200, 300, 400]}
           sizes="(max-width: 1024px) 200px, 300px"
         />
       </div>
     </div>
     <div
-      class="flex order-1 lg:order-2 w-fit pt-11 flex-col justify-center items-start gap-6 max-w-[600px] text-box-2"
+      class="flex order-1 lg:order-2 w-fit pt-11 flex-col justify-center items-start gap-6 max-w-[600px] border-top border-[var(--primary)] border-t"
     >
-      <p class="big-text">Povestea mea:</p>
+      <p class="text-[var(--text)] text-[32px] font-extralight leading-[56px]">Povestea mea:</p>
       <div class="flex gap-6 justify-center items-center">
-        <p class="text-info">
+        <p class="text-[var(--backgroundGrey)] text-[16px] font-normal leading-[25.6px]">
           După ce am terminat facultatea, am simțit că încă nu îmi găsisem cu
           adevărat drumul. Am lucrat o perioadă în domeniul imobiliarelor, până
           când, într-o zi, un prieten mi-a cerut ajutorul pentru durerile lui de
@@ -125,96 +125,5 @@ import Image from "astro/components/Image.astro";
       </div>
     </div>
   </div>
-  <div class="margin-box-2"></div>
+  <div class="border-t border-[var(--primary)] h-[100px] max-[640px]:h-[56px]"></div>
 </div>
-<style>
-  .img-1 {
-    min-height: 400px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 200px;
-  }
-  .margin-box-2 {
-    border-top: 1px solid var(--primary);
-    height: 100px;
-  }
-  @media only screen and (max-width: 640px) {
-    .margin-box-2 { height: 56px; }
-    .margin-box { height: 56px; }
-  }
-  .text-box-2 {
-    border-top: 1px solid var(--primary);
-  }
-  .text-box-1 {
-    border-bottom: 1px solid var(--primary);
-  }
-  .photo-banner-2 {
-    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
-    border-radius: 44px 24px 88px 24px;
-    background: var(--primary);
-  }
-  .photo-banner-1 {
-    border-radius: 24px 44px 24px 88px;
-    background: var(--primary);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .text-info {
-    color: var(--backgroundGrey);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25.6px; /* 160% */
-  }
-  .big-text {
-    color: var(--text);
-    font-size: 32px;
-    font-weight: 200;
-    line-height: 56px; /* 175% */
-  }
-  .hobby {
-    color: var(--secondary);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.1px;
-  }
-  .name {
-    color: var(--assets);
-    font-size: 40px;
-    font-weight: 175;
-    line-height: 93.2%; /* 37.28px */
-    letter-spacing: 0.1px;
-  }
-  @media only screen and (max-width: 700px) {
-    .name {
-      font-size: 35px;
-    }
-    .hobby {
-      font-size: 16px;
-    }
-    .big-text {
-      font-size: 28px;
-    }
-    .text-info {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-  .margin-box {
-    border-bottom: 1px solid var(--primary);
-    height: 100px;
-  }
-  .container-3 {
-    background-color: var(--components);
-  }
-  .bord-left {
-    border-radius: 0px 44px;
-    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
-  }
-  .bord-right {
-    border-radius: 44px 0px;
-    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.61);
-  }
-</style>

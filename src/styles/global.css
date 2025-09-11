@@ -1,6 +1,136 @@
 @import "tailwindcss";
 @import "./color.css";
 
+/* Base document styles formerly in Layout.astro */
+html, body {
+  overflow: auto;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+html { box-sizing: border-box; }
+
+/* Removed: typography helpers now expressed with Tailwind utilities inline */
+
+/* Namespaced component-specific decorations (moved from .astro files) */
+/* Why Him bubbles */
+.c-why .background-5, .c-why .background-6, .c-why .background-7, .c-why .background-8 { position: relative; z-index: 1; }
+.c-why .background-5.in-view::before, .c-why .background-6.in-view::before, .c-why .background-7.in-view::before, .c-why .background-8.in-view::before { opacity: 1; transform: translateY(0) scale(1); }
+.c-why .background-5::before, .c-why .background-6::before, .c-why .background-7::before, .c-why .background-8::before {
+  content: "";
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,.25);
+  position: absolute;
+  width: 300px; height: 300px; z-index: 0; opacity: 0;
+  transform: translateY(40px) scale(.9);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.c-why .background-5::before { background-color: var(--third); top: -40px; left: -40px; }
+.c-why .background-6::before { background-color: var(--third); top: -40px; right: -40px; }
+.c-why .background-7::before { background-color: var(--secondary); bottom: -40px; right: -40px; }
+.c-why .background-8::before { background-color: var(--secondary); bottom: -40px; left: -40px; }
+@media (max-width: 1024px) {
+  .c-why .background-6::before, .c-why .background-7::before, .c-why .background-8::before, .c-why .background-5::before { width: 180px; height: 180px; }
+  .c-why .background-6::before { top: -30px; right: -30px; }
+  .c-why .background-7::before { bottom: -30px; right: -30px; }
+  .c-why .background-8::before { bottom: -30px; left: -30px; }
+  .c-why .background-5::before { top: -30px; left: -30px; }
+}
+@media (max-width: 640px) {
+  .c-why .background-6::before, .c-why .background-7::before, .c-why .background-8::before, .c-why .background-5::before { width: 160px; height: 160px; }
+  .c-why .background-6::before { top: -20px; right: -20px; }
+  .c-why .background-7::before { bottom: -20px; right: -20px; }
+  .c-why .background-8::before { bottom: -20px; left: -20px; }
+  .c-why .background-5::before { top: -20px; left: -20px; }
+}
+
+/* Contact section bubbles + spacers */
+.c-contact .background-1, .c-contact .background-2 { position: relative; z-index: 1; }
+.c-contact .background-1.in-view::before, .c-contact .background-2.in-view::before { opacity: 1; transform: translateY(0) scale(1); }
+.c-contact .background-1::before, .c-contact .background-2::before {
+  content: "";
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,.25);
+  position: absolute; z-index: 0; opacity: 0;
+  transform: translateY(40px) scale(.9);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.c-contact .background-1::before { background-color: var(--third); top: -220px; left: -80px; width: 200px; height: 200px; }
+.c-contact .background-2::before { background-color: var(--secondary); top: 20px; left: -100px; width: 200px; height: 200px; }
+.c-contact .margin-top { height: 100px; border-bottom: 1px solid var(--third); background-color: var(--text); }
+.c-contact .margin-bottom { height: 100px; border-top: 1px solid var(--third); background-color: var(--text); }
+@media (max-width: 1024px) {
+  .c-contact .background-2::before { top: 20px; left: -100px; width: 200px; height: 200px; }
+  .c-contact .background-1::before { top: -220px; left: -80px; width: 200px; height: 200px; }
+}
+@media (max-width: 780px) {
+  .c-contact .background-2::before { top: 70px; left: -70px; width: 110px; height: 120px; }
+  .c-contact .background-1::before { top: -200px; left: -20px; width: 110px; height: 120px; }
+}
+@media (max-width: 640px) {
+  .c-contact .margin-top { height: 48px; }
+  .c-contact .margin-bottom { height: 56px; }
+  .c-contact .background-2::before { top: 60px; left: -50px; width: 140px; height: 150px; }
+  .c-contact .background-1::before { top: -180px; left: -15px; width: 140px; height: 150px; }
+}
+
+/* Examples page decorations */
+.c-examples .margin-box-2 { height: 100px; }
+@media (max-width: 640px) { .c-examples .margin-box-2 { height: 48px; } }
+.c-examples .container-1 { border-bottom: 2px solid var(--third); background-color: var(--text); content-visibility: auto; contain-intrinsic-size: 800px 600px; }
+.c-examples .margin-box { height: 200px; }
+.c-examples .title { color: var(--components); text-align: center; font-size: 36px; font-weight: 300; line-height: 56px; }
+.c-examples .banner-2 { position: relative; z-index: 100; border-radius: 12px; background: var(--components); box-shadow: 0 4px 4px rgba(0,0,0,.25); }
+.c-examples .background-3, .c-examples .background-2, .c-examples .background-1 { position: relative; z-index: 1; }
+.c-examples .background-3.in-view::before, .c-examples .background-2.in-view::before, .c-examples .background-1.in-view::before { opacity: 1; transform: translateY(0) scale(1); }
+.c-examples .background-3::before { content: ""; background-color: var(--primary); border-radius: 50px; box-shadow: 0 4px 4px rgba(0,0,0,.25); position: absolute; bottom: -50px; right: 90px; width: 550px; height: 250px; z-index: 0; opacity: 0; transform: translateY(40px) scale(.9); transition: opacity .6s ease, transform .6s ease; }
+.c-examples .background-2::before { content: ""; background-color: var(--third); border-radius: 50px; box-shadow: 0 4px 4px rgba(0,0,0,.25); position: absolute; bottom: -50px; left: -60px; width: 250px; height: 550px; z-index: 0; opacity: 0; transform: translateY(40px) scale(.9); transition: opacity .6s ease, transform .6s ease; }
+.c-examples .background-1::before { content: ""; background-color: var(--secondary); border-radius: 50px; box-shadow: 0 4px 4px rgba(0,0,0,.25); position: absolute; top: -50px; right: -60px; width: 600px; height: 250px; z-index: 0; opacity: 0; transform: translateY(40px) scale(.9); transition: opacity .6s ease, transform .6s ease; }
+@media (max-width: 1024px) {
+  .c-examples .background-2::before { bottom: -30px; right: -30px; width: 220px; height: 220px; }
+  .c-examples .background-3::before { bottom: 150px; right: -24px; width: 220px; height: 220px; }
+  .c-examples .background-4::before { bottom: -30px; left: -30px; width: 220px; height: 220px; }
+  .c-examples .background-1::before { top: -30px; left: -30px; width: 220px; height: 220px; }
+}
+@media (max-width: 640px) {
+  .c-examples .background-2::before { bottom: -18px; right: -18px; width: 190px; height: 190px; }
+  .c-examples .background-3::before { bottom: 100px; right: -18px; width: 190px; height: 190px; }
+  .c-examples .background-1::before { top: -18px; right: -18px; width: 200px; height: 190px; }
+}
+
+/* About page pieces */
+.c-about .img-1 { min-height: 400px; }
+.c-about img { width: 100%; height: 100%; object-fit: cover; max-width: 200px; }
+.c-about .margin-box-2 { border-top: 1px solid var(--primary); height: 100px; }
+@media (max-width: 640px) { .c-about .margin-box-2, .c-about .margin-box { height: 56px; } }
+.c-about .img-1 { min-height: 400px; }
+.c-about img { width: 100%; height: 100%; object-fit: cover; max-width: 200px; }
+.c-about .margin-box-2 { border-top: 1px solid var(--primary); height: 100px; }
+@media (max-width: 640px) { .c-about .margin-box-2, .c-about .margin-box { height: 56px; } }
+
+/* Services cards */
+/* c-services cards and hover */
+.c-services .image-contaier { position: relative; width: 300px; height: 300px; border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,.15); background: #000; }
+.c-services .card-link { position: relative; display: block; width: 100%; height: 100%; }
+.c-services .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform .35s ease, filter .35s ease; filter: brightness(.85); }
+.c-services .card-gradient { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.6) 8%, rgba(0,0,0,.25) 40%, rgba(0,0,0,0) 70%); }
+.c-services .card-content { position: absolute; left: 0; right: 0; bottom: 52px; padding: 10px 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 2; }
+.c-services .card-title { color: #fff; font-size: 20px; font-weight: 300; text-align: center; text-shadow: 0 2px 4px rgba(0,0,0,.3); }
+.c-services .card-sub { color: #fff; font-size: 12px; font-weight: 300; opacity: .9; text-align: center; }
+.c-services .card-cta { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10px; display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: var(--assets); color: var(--text); font-size: 12px; font-weight: 600; z-index: 3; box-shadow: 0 4px 8px rgba(0,0,0,.25); white-space: nowrap; }
+.c-services .image-contaier:hover .card-img { transform: scale(1.05); filter: brightness(.95); }
+@media (max-width: 1024px) {
+  .c-services .image-contaier { width: 220px; height: 220px; }
+  .c-services .card-title { font-size: 16px; }
+  .c-services .card-content { bottom: 46px; }
+  .c-services .card-cta { bottom: 8px; padding: 6px 10px; font-size: 11px; }
+}
+
+/* Index banners and typography */
+/* c-index: moved layout/typography to inline Tailwind */
+
+
 @media only screen and (max-width: 1024px) {
   .background-2::before {
     top: 370px !important;
@@ -30,11 +160,6 @@
 html,
 body {
   scroll-behavior: smooth;
-}
-button:hover,
-a:hover {
-  cursor: pointer;
-  transform: scale(1.05);
 }
 .margin-box-2 {
   height: 100px;

@@ -9,10 +9,10 @@ import Image6 from "../assets/images/IMG_1613.webp";
 ---
 
 <div
-  class="all-div flex self-stretch pt-9 lg:pb-80 pb-24 justify-center items-center bg-components"
+  class="c-services flex self-stretch pt-[120px] lg:pb-80 pb-24 justify-center items-center bg-[var(--components)]"
 >
   <div class="flex flex-col items-center gap-6">
-    <h1 class="heading">Serviciile noastre</h1>
+    <h1 class="text-[var(--text)] text-center text-[40px] font-light leading-normal tracking-[-0.205px]">Serviciile noastre</h1>
     <div>
       <div
         class="flex flex-col justify-center items-center self-stretch gap-2.5"
@@ -148,17 +148,17 @@ import Image6 from "../assets/images/IMG_1613.webp";
       </div>
     </div>
     <div
-      class="flex flex-col justify-center items-center gap-6 pt-14 max-w-3/4 container-like"
+      class="flex flex-col justify-center items-center gap-6 pt-14 max-w-3/4 border-t border-[var(--primary)]"
     >
-      <h3 class="not-text mb-14">
+      <h3 class="text-[var(--backgroundGrey)] text-center text-[24px] font-extralight mb-14">
         Nu regăsești cerinta ta specifică în listă? Contactează-ne pentru o
         evaluare personalizată și un plan de tratament adaptat nevoilor tale!
       </h3>
       <a
         href="/servicii#contact"
-        class="inline-flex justify-center items-center gap-2 py-6 px-3 btn-get rounded-3xl"
+        class="inline-flex justify-center items-center gap-2 py-6 px-3 rounded-3xl transition hover:shadow-lg hover:scale-105 cursor-pointer bg-[var(--primary)] shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
       >
-        <p class="text-med">Solicită o ședință</p>
+        <p class="text-[var(--text)] text-[16px] font-bold leading-[12px]">Solicită o ședință</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="12"
@@ -177,119 +177,5 @@ import Image6 from "../assets/images/IMG_1613.webp";
     </div>
   </div>
 </div>
-<div class="margin-1"></div>
-<div class="margin-2"></div>
-
-<style>
-  button:hover {
-    background: var(--primary-hover);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .all-div {
-    padding-top: 120px;
-  }
-  .margin-1 {
-    background-color: var(--components);
-    border-bottom: 1px solid var(--PR1, #257d7f);
-    height: 100px;
-  }
-  .margin-2 {
-    background-color: var(--components);
-    height: 100px;
-  }
-
-  .container-like {
-    border-top: 1px solid var(--primary);
-  }
-  .text-med {
-    color: var(--text);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 12px; /* 75% */
-  }
-  .not-text {
-    color: var(--backgroundGrey);
-    text-align: center;
-    font-size: 24px;
-    font-weight: 200;
-    line-height: normal;
-  }
-  .small-text {
-    color: var(--text);
-    font-size: 12px;
-    font-weight: 200;
-    line-height: normal;
-  }
-  .text-btn {
-    color: var(--text);
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 12px; /* 100% */
-  }
-  .btn-get {
-    background-color: var(--primary);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .image-contaier {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid var(--primary);
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-    background: #000;
-  }
-  .card-link { position: relative; display: block; width: 100%; height: 100%; }
-  .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform .35s ease, filter .35s ease; filter: brightness(0.85); }
-  .card-gradient { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.6) 8%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0) 70%); }
-  /* Lift the title above the CTA to avoid overlap */
-  .card-content { position: absolute; left: 0; right: 0; bottom: 52px; padding: 10px 14px; display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 2; }
-  .card-title { color: #fff; font-size: 20px; font-weight: 300; text-align: center; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-  .card-sub { color: #fff; font-size: 12px; font-weight: 300; opacity: .9; text-align: center; }
-  .card-cta { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10px; display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: var(--assets); color: var(--text); font-size: 12px; font-weight: 600; z-index: 3; box-shadow: 0 4px 8px rgba(0,0,0,0.25); white-space: nowrap; }
-  .image-contaier:hover .card-img { transform: scale(1.05); filter: brightness(0.95); }
-  @media only screen and (max-width: 1024px) {
-    .image-contaier { width: 220px !important; height: 220px !important; }
-    .card-title { font-size: 16px; }
-    .card-content { bottom: 46px; }
-    .card-cta { bottom: 8px; padding: 6px 10px; font-size: 11px; }
-  }
-
-  .heading {
-    color: var(--text);
-    text-align: center;
-    font-size: 40px;
-    font-weight: 175;
-    line-height: normal;
-    letter-spacing: -0.205px;
-  }
-  @media only screen and (max-width: 1024px) {
-    .heading {
-      font-size: 32px;
-    }
-    .text-service,
-    .text-service-2,
-    .text-service-3,
-    .text-service-4 {
-      font-size: 14px !important;
-
-      right: 0 !important;
-      text-align: center !important;
-      bottom: 80px !important;
-      left: 0 !important;
-      justify-self: center;
-      align-self: anchor-center;
-    }
-    button {
-      width: max-content;
-    }
-    .text-btn {
-      font-size: 10px !important;
-    }
-  }
-  .bg-components {
-    background-color: var(--components);
-  }
-</style>
+<div class="bg-[var(--components)] border-b border-[var(--primary)] h-[100px]"></div>
+<div class="bg-[var(--components)] h-[100px]"></div>
